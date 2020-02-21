@@ -1,4 +1,6 @@
 poolobject
+[![Build Status](https://travis-ci.com/jaa0124/_poolobject.svg?branch=master)](https://travis-ci.com/jaa0124/_poolobject)
+[![codecov](https://codecov.io/gh/jaa0124/_poolobject/branch/master/graph/badge.svg)](https://codecov.io/gh/jaa0124/_poolobject)
 ==========
 
 Java code example of  design creational pattern pool object
