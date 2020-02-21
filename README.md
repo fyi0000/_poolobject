@@ -26,14 +26,14 @@ prueba del software
 
 Cuestiones
 ==========
-◦ ¿Se ha realizado trabajo en equipo?
-Sí, ha sido realizado por Fco Javier Yagüe Izquierdo y Johnson Arrobo Acaro
+◦ __¿Se ha realizado trabajo en equipo?__
+* Sí, ha sido realizado por Fco Javier Yagüe Izquierdo y Johnson Arrobo Acaro
 
-◦ ¿Tiene calidad el conjunto de pruebas disponibles?
-Las pruebas sobre la clase ReusablePoolTest cubren el 100%. Las pruebas en Travis funcionan correctamente y la cobertura global es un 69% absoluta en todo el directorio src y absoluta del 100%.
+◦ __¿Tiene calidad el conjunto de pruebas disponibles?__
+* Las pruebas sobre la clase ReusablePoolTest cubren el 100%. Las pruebas en Travis funcionan correctamente y la cobertura global es un 69% absoluta en todo el directorio src y absoluta del 100%.
 
-◦ ¿Cuál es el esfuerzo invertido en realizar la actividad?
-La actividad que más tiempo ha supuesto ha sido la realización de los test, una vez listos tan solo era hacer commits al repositorio para su procesado en travis. Debido a un fallo que ha sido actualizado en el repositorio original en travis.yaml, todo funciona correctamente.
+◦ __¿Cuál es el esfuerzo invertido en realizar la actividad?__
+* La actividad que más tiempo ha supuesto ha sido la realización de los test, una vez listos tan solo era hacer commits al repositorio para su procesado en travis. Debido a un fallo que ha sido actualizado en el repositorio original en travis.yaml, todo funciona correctamente.
 
-◦ ¿Cuál es el número de fallos encontrados en el código?
-El único fallo reseñable era el par de líneas que faltaban en el travis.yaml original que impedían que se construyese correctamente.
+◦ __¿Cuál es el número de fallos encontrados en el código?__
+* El único fallo reseñable era el par de líneas que faltaban en el travis.yaml original que impedían que se construyese correctamente.
