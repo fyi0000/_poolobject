@@ -15,6 +15,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import ubu.gii.dass.c01.DuplicatedInstanceException;
 import ubu.gii.dass.c01.NotFreeInstanceException;
 import ubu.gii.dass.c01.Reusable;
 import ubu.gii.dass.c01.ReusablePool;
@@ -72,9 +73,8 @@ public class ReusablePoolTest {
 				assertNotNull(reusables.add(poolTests1.acquireReusable()));
 				assertNotNull(reusables.add(poolTests2.acquireReusable()));
 
-
 			}
-		}catch(NotFreeInstanceException ex) {
+		} catch (NotFreeInstanceException ex) {
 			sizeReusable++;
 			flag = false;
 			assertFalse(flag);
@@ -83,11 +83,23 @@ public class ReusablePoolTest {
 	}
 
 	/**
-	 * Test method for {@link ubu.gii.dass.c01.ReusablePool#releaseReusable(ubu.gii.dass.c01.Reusable)}.
+	 * Test method for
+	 * {@link ubu.gii.dass.c01.ReusablePool#releaseReusable(ubu.gii.dass.c01.Reusable)}.
 	 */
 	@Test
 	public void testReleaseReusable() {
-		fail("Not yet implemented");
+		Reusable reusableNoExistente = new Reusable(); // reusable not in reusables
+		Reusable reusableNoExistente2 = new Reusable();// reusable not in reusables
+		Vector<Reusable> reusables = new Vector<>();
+		try {
+			poolTests2.releaseReusable(reusableNoExistente);
+			poolTests2.releaseReusable(reusableNoExistente2);
+			while (true) {
+				reusables.add(poolTests2.acquireReusable());
+			}
+		} catch (DuplicatedInstanceException | NotFreeInstanceException ex) {
+			assertEquals(reusables.size(), 4);
+		}
 	}
 
 }
