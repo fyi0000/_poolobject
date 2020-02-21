@@ -12,7 +12,8 @@ import org.junit.Test;
 import ubu.gii.dass.c01.ReusablePool;
 
 /**
- * @author alumno
+ * @author <a href="mailto:fyi0000@alu.ubu.es">Fco Javier Yague Izquierdo<a>
+ * @author <a href="mailto:jaa0124@alu.ubu.es">Johnson Arrobo Acaro<a>
  *
  */
 public class ReusablePoolTest {
