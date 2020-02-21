@@ -1,13 +1,15 @@
 /**
- * 
+ *
  */
 package ubu.gii.dass.test.c01;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.fail;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import ubu.gii.dass.c01.ReusablePool;
 
 /**
  * @author alumno
@@ -15,11 +17,16 @@ import org.junit.Test;
  */
 public class ReusablePoolTest {
 
+	private ReusablePool poolTests1;
+	private ReusablePool poolTests2;
+
 	/**
 	 * @throws java.lang.Exception
 	 */
 	@Before
 	public void setUp() throws Exception {
+		poolTests1 = ReusablePool.getInstance();
+		poolTests2 = ReusablePool.getInstance();
 	}
 
 	/**
@@ -27,6 +34,7 @@ public class ReusablePoolTest {
 	 */
 	@After
 	public void tearDown() throws Exception {
+		poolTests1 = poolTests2 = null;
 	}
 
 	/**
