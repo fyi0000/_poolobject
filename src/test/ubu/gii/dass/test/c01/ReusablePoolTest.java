@@ -3,14 +3,20 @@
  */
 package ubu.gii.dass.test.c01;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
+
+import java.util.Vector;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import ubu.gii.dass.c01.NotFreeInstanceException;
+import ubu.gii.dass.c01.Reusable;
 import ubu.gii.dass.c01.ReusablePool;
 
 /**
@@ -56,7 +62,24 @@ public class ReusablePoolTest {
 	 */
 	@Test
 	public void testAcquireReusable() {
-		fail("Not yet implemented");
+		boolean flag = true;
+		int sizeReusable = 0;
+
+		try {
+			Vector<Reusable> reusables = new Vector<>();
+			while (flag) {
+				sizeReusable++;
+				assertNotNull(reusables.add(poolTests1.acquireReusable()));
+				assertNotNull(reusables.add(poolTests2.acquireReusable()));
+
+
+			}
+		}catch(NotFreeInstanceException ex) {
+			sizeReusable++;
+			flag = false;
+			assertFalse(flag);
+		}
+		assertEquals(2, sizeReusable);
 	}
 
 	/**
