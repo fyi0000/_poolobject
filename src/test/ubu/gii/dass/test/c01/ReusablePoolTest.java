@@ -3,6 +3,8 @@
  */
 package ubu.gii.dass.test.c01;
 
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import org.junit.After;
@@ -43,7 +45,10 @@ public class ReusablePoolTest {
 	 */
 	@Test
 	public void testGetInstance() {
-		fail("Not yet implemented");
+		assertNotNull(poolTests1);
+		assertNotNull(poolTests2);
+		assertTrue(poolTests1 instanceof ReusablePool);
+		assertTrue(poolTests2 instanceof ReusablePool);
 	}
 
 	/**
